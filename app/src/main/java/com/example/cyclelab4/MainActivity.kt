@@ -103,6 +103,31 @@ fun MainScreen(modifier: Modifier = Modifier) {
             color = MaterialTheme.colorScheme.primary
         )
 
+        Spacer(modifier = Modifier.height(12.dp))
+
+        Card(
+            modifier = Modifier.fillMaxWidth(),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.primaryContainer
+            )
+        ) {
+            Column(modifier = Modifier.padding(12.dp)) {
+                Text(
+                    text = "Формула ряда:",
+                    style = MaterialTheme.typography.labelLarge,
+                    fontWeight = FontWeight.Bold
+                )
+                Text(
+                    text = "S = 1/1! + 1/3! + 1/5! + 1/7! + ...",
+                    style = MaterialTheme.typography.bodyMedium
+                )
+                Text(
+                    text = "где n! = 1 · 2 · ... · n",
+                    style = MaterialTheme.typography.bodySmall
+                )
+            }
+        }
+
         Spacer(modifier = Modifier.height(16.dp))
 
         OutlinedTextField(
